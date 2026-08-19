@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>CFBundleExecutable</key>
+    <string>MagicMask</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.yourcompany.magicmask</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>MagicMask</string>
+    <key>CFBundlePackageType</key>
+    <string>BNDL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1.0.0</string>
+    <key>OFXPlugin</key>
+    <dict>
+        <key>OfxPluginVersionMajor</key>
+        <integer>1</integer>
+        <key>OfxPluginVersionMinor</key>
+        <integer>0</integer>
+        <key>OfxPluginIdentifier</key>
+        <string>com.yourcompany.magicmask</string>
+        <key>OfxPluginDescription</key>
+        <string>KI-based Rotoscoping/Matting Plugin for DaVinci Resolve</string>
+        <key>OfxPluginCategory</key>
+        <string>OFXPluginCategoryFilter</string>
+        <key>OfxPluginGrouping</key>
+        <string>MagicMask</string>
+        <key>OfxPluginProperties</key>
+        <dict>
+            <key>OfxImageEffectHostDescription</key>
+            <string>DaVinci Resolve</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

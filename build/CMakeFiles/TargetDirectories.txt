@@ -1,0 +1,7 @@
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/MagicMaskPlugin.dir
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/edit_cache.dir
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/rebuild_cache.dir
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/list_install_components.dir
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/install.dir
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/install/local.dir
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles/install/strip.dir
