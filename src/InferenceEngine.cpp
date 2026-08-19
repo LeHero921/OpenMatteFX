@@ -1,5 +1,6 @@
 #include "InferenceEngine.hpp"
 #include <onnxruntime_cxx_api.h>
+#include "Support/ofxsImageEffect.h"
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -71,21 +72,51 @@ void InferenceEngine::initialize(const std::string& sam2ModelPath, const std::st
 }
 
 void InferenceEngine::initializeMetal() {
-    // In a real implementation, this would load the Metal library from bundle
-    // This is where you'd compile or load your Metal shaders
-    
-    /*
-    // Example of how to load Metal library:
-    NSString* shaderPath = [[NSBundle mainBundle] pathForResource:@"MetalTensorConverter" 
-                                                              ofType:@"metallib"];
-    NSError* error = nil;
-    m_metalLibrary = [m_metalDevice newLibraryWithURL:[NSURL fileURLWithPath:shaderPath] 
-                                               error:&error];
-    
-    if (!m_metalLibrary) {
-        std::cerr << "Failed to load Metal library: " << [error.localizedDescription UTF8String] << std::endl;
+    try {
+        // Create Metal device - this is the most critical step
+        m_metalDevice = MTLCreateSystemDefaultDevice();
+        if (!m_metalDevice) {
+            std::cerr << "Warning: No Metal device available. Falling back to CPU processing." << std::endl;
+            return;
+        }
+        
+        // Create command queue for GPU operations
+        m_commandQueue = [m_metalDevice newCommandQueue];
+        if (!m_commandQueue) {
+            throw std::runtime_error("Failed to create Metal command queue");
+        }
+        
+        // Attempt to load Metal library from bundle
+        NSError* error = nil;
+        NSString* mainBundlePath = [[NSBundle mainBundle] bundlePath];
+        NSString* libraryPath = [mainBundlePath stringByAppendingPathComponent:@"Resources/shaders/MetalTensorConverter.metallib"];
+        
+        // Check if file exists before loading
+        NSFileManager* fileManager = [NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:libraryPath]) {
+            m_metalLibrary = [m_metalDevice newLibraryWithURL:[NSURL fileURLWithPath:libraryPath] error:&error];
+            if (!m_metalLibrary) {
+                std::cerr << "Warning: Failed to load Metal library: " 
+                         << [[error localizedDescription] UTF8String] << std::endl;
+                // Continue with CPU fallback
+            } else {
+                std::cout << "Metal library loaded successfully from: " << [libraryPath UTF8String] << std::endl;
+            }
+        } else {
+            std::cerr << "Warning: Metal library not found at: " << [libraryPath UTF8String] << std::endl;
+        }
+        
+        // Create buffer pool for efficient memory management
+        m_bufferPool = [[NSCache alloc] init];
+        [m_bufferPool setCacheCostLimit:1024 * 1024 * 100]; // 100MB limit
+        
+        m_metalInitialized = true;
+        std::cout << "Metal initialization completed successfully" << std::endl;
+        
+    } catch (const std::exception& e) {
+        std::cerr << "Error during Metal initialization: " << e.what() << std::endl;
+        m_metalInitialized = false;
     }
-    */
 }
 
 void InferenceEngine::loadModel(const std::string& modelPath, OrtSession** session) {

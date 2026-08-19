@@ -1,28 +1,26 @@
+#include "InferenceEngine.hpp"
+#include <iostream>
+#include <vector>
+#include <CoreFoundation/CoreFoundation.h>
 #include <ofxImageEffect.h>
 #include <ofxProperty.h>
 #include <ofxParam.h>
 #include <ofxCore.h>
-#include <ofxSupport.h>
 #include <ofxInteract.h>
-#include "InferenceEngine.hpp"
-#include "Support/ofxsParam.h"
 #include "Support/ofxsLog.h"
 #include "Support/ofxsMessage.h"
 #include "Support/ofxsProcessing.h"
-#include "Support/ofxsimageEffect.h"
-#include "Support/ofxsInteract.h"
-#include "Support/ofxsCore.h"
 #include "Support/ofxsMultiThread.h"
 #include "Support/ofxsMemory.h"
 
 // Plugin info
-#define PLUGIN_NAME "MagicMask"
+#define PLUGIN_NAME "OpenMatteFX"
 #define PLUGIN_VERSION_MAJOR 1
 #define PLUGIN_VERSION_MINOR 0
 #define PLUGIN_VERSION_MICRO 0
 
 // Plugin ID
-#define PLUGIN_ID "com.yourcompany.magicmask"
+#define PLUGIN_ID "com.QuantuumStudios.openmattefx"
 
 // Parameter names
 #define PARAM_SELECTION_POINT "selectionPoint"
@@ -39,8 +37,37 @@ enum InferenceMode {
 class MagicMaskPlugin : public OFX::ImageEffect {
 private:
     OFX::ChoiceParam* m_inferenceMode;
-    OFX::PointParam* m_selectionPoint;
+    OFX::Double2DParam* m_selectionPoint;
     OFX::PushButtonParam* m_resetMask;
+    std::unique_ptr<InferenceEngine> m_engine;
+
+    // --- HIER MUSS DIE HILFSFUNKTION HIN (mit double time) ---
+    void applyMaskToOutput(OFX::Clip* outputClip, const std::vector<float>& mask, int width, int height, double time) {
+        if (mask.empty() || width <= 0 || height <= 0 || !outputClip) return;
+        
+        try {
+            OfxRectD rod = outputClip->getRegionOfDefinition(time);
+            OfxRectI bounds;
+            bounds.x1 = static_cast<int>(rod.x1);
+            bounds.y1 = static_cast<int>(rod.y1);
+            bounds.x2 = static_cast<int>(rod.x2);
+            bounds.y2 = static_cast<int>(rod.y2);
+            
+            // Hier nutzen wir jetzt das 'time' statt 'args.time'
+            OFX::Image* outputImg = outputClip->fetchImage(time);
+            if (!outputImg) return;
+            
+            void* pixelData = outputImg->getPixelData();
+            int rowBytes = outputImg->getRowBytes();
+            
+            // Rest deines Codes zum Anwenden der Maske...
+            
+            delete outputImg; // C++ Support Wrapper nutzt delete statt releaseImage
+            
+        } catch (const std::exception& e) {
+            std::cerr << "Error applying mask to output: " << e.what() << std::endl;
+        }
+    }
 
 public:
     MagicMaskPlugin(OfxImageEffectHandle handle) 
@@ -51,7 +78,7 @@ public:
         
         // Get parameters
         m_inferenceMode = fetchChoiceParam(PARAM_INFERENCE_MODE);
-        m_selectionPoint = fetchPointParam(PARAM_SELECTION_POINT);
+        m_selectionPoint = fetchDouble2DParam(PARAM_SELECTION_POINT);
         m_resetMask = fetchPushButtonParam(PARAM_RESET_MASK);
         
         // Set default values
@@ -71,17 +98,17 @@ public:
         }
     }
 
-    virtual bool isIdentity(const OFX::IsIdentityArgs &args, OFX::Clip *&identityClip, double &identityTime) override {
+    virtual bool isIdentity(const OFX::IsIdentityArguments &args, OFX::Clip *&identityClip, double &identityTime) override {
         // Implement identity check logic if applicable
         return false;
     }
 
-    virtual void getClipPreferences(OFX::ClipPreferencesArgs &args) override {
+    virtual void getClipPreferences(OFX::ClipPreferencesSetter &args) override {
         // Set clip preferences for better performance
-        args.setOutputClipPreferences().setUnmapped(true);
+        // args.setOutputClipPreferences().setUnmapped(true);
     }
 
-    virtual void render(const OFX::RenderArgs &args) override {
+    virtual void render(const OFX::RenderArguments &args) override {
         // Get input and output clips
         OFX::Clip* srcClip = fetchClip("Source");
         OFX::Clip* outputClip = fetchClip("Output");
@@ -89,7 +116,12 @@ public:
         if (!srcClip || !outputClip) return;
         
         // Get frame dimensions
-        OfxRectI bounds = srcClip->getBounds();
+        OfxRectD rod = srcClip->getRegionOfDefinition(args.time);
+        OfxRectI bounds;
+        bounds.x1 = static_cast<int>(rod.x1);
+        bounds.y1 = static_cast<int>(rod.y1);
+        bounds.x2 = static_cast<int>(rod.y2); // bzw. rod.x2
+        bounds.y2 = static_cast<int>(rod.y2);
         int width = bounds.x2 - bounds.x1;
         int height = bounds.y2 - bounds.y1;
         
@@ -120,7 +152,7 @@ public:
             );
             
             // Apply mask to output clip
-            applyMaskToOutput(outputClip, resultMask, width, height);
+            applyMaskToOutput(outputClip, resultMask, width, height, args.time);
             
         } catch (const std::exception& e) {
             // Log error but don't crash the host application
@@ -143,7 +175,7 @@ private:
     
     // Helper to apply mask
     // Apply generated mask to output clip
-void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector<float>& mask, int width, int height) {
+void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector<float>& mask, int width, int height, double time) {
     if (mask.empty() || width <= 0 || height <= 0 || !outputClip) return;
     
     try {
@@ -155,7 +187,7 @@ void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector
         bounds.y2 = height;
         
         // Fetch the output image for writing
-        OFX::Image* outputImg = outputClip->fetchImage(bounds);
+        OFX::Image* outputImg = outputClip->fetchImage(time);
         if (!outputImg) return;
         
         // Get image properties
@@ -165,7 +197,7 @@ void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector
         
         // Get pixel data pointer
         void* pixelData = outputImg->getPixelData();
-        int bytesPerPixel = outputImg->getBytesPerPixel();
+        int bytesPerPixel = outputImg->getRowBytes();
         int rowBytes = outputImg->getRowBytes();
         
         // Apply mask to alpha channel (assuming RGBA format)
@@ -187,7 +219,8 @@ void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector
         }
         
         // Release the image back to the host
-        outputClip->releaseImage(outputImg);
+        // outputClip->releaseImage(outputImg);
+        delete outputImg;
         
     } catch (const std::exception& e) {
         std::cerr << "Error applying mask to output: " << e.what() << std::endl;
@@ -201,11 +234,27 @@ OFX::ImageEffect* createPlugin(OfxImageEffectHandle handle) {
     return new MagicMaskPlugin(handle);
 }
 
-// Plugin registration
-void OFXEntryPoints(void) {
-    OFX::registerImageEffect(createPlugin, 
-                            PLUGIN_NAME, 
-                            PLUGIN_VERSION_MAJOR, 
-                            PLUGIN_VERSION_MINOR,
-                            "Magic Mask plugin for DaVinci Resolve");
+// You need a factory class to describe and create your plugin
+class MagicMaskPluginFactory : public OFX::PluginFactoryHelper<MagicMaskPluginFactory> {
+public:
+    MagicMaskPluginFactory() : OFX::PluginFactoryHelper<MagicMaskPluginFactory>(PLUGIN_ID, PLUGIN_VERSION_MAJOR, PLUGIN_VERSION_MINOR) {}
+    
+    virtual void describe(OFX::ImageEffectDescriptor &desc) override {
+        desc.setPluginGrouping("YourCompany");
+        desc.setPluginDescription("Magic Mask plugin for DaVinci Resolve");
+    }
+    
+    virtual void describeInContext(OFX::ImageEffectDescriptor &desc, OFX::ContextEnum context) override {
+        // Define your inputs/outputs here if needed
+    }
+    
+    virtual OFX::ImageEffect* createInstance(OfxImageEffectHandle handle, OFX::ContextEnum context) override {
+        return new MagicMaskPlugin(handle);
+    }
+};
+
+// The wrapper looks for this specific function to load the plugin
+void OFX::Plugin::getPluginIDs(OFX::PluginFactoryArray &ids) {
+    static MagicMaskPluginFactory p;
+    ids.push_back(&p);
 }

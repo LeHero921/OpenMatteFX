@@ -75,30 +75,30 @@ CMakeFiles/MagicMaskPlugin.dir/codegen:
 CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o: CMakeFiles/MagicMaskPlugin.dir/flags.make
 CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp
 CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o: CMakeFiles/MagicMaskPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o -MF CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o.d -o CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o -c /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building OBJCXX object CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o"
+	/usr/bin/clang++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) -x objective-c++ $(OBJCXX_FLAGS) -MD -MT CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o -MF CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o.d -o CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o -c /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp
 
 CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp > CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing OBJCXX source to CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.i"
+	/usr/bin/clang++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -E /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp > CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.i
 
 CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp -o CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling OBJCXX source to assembly CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.s"
+	/usr/bin/clang++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -S /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp -o CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.s
 
 CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o: CMakeFiles/MagicMaskPlugin.dir/flags.make
 CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp
 CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o: CMakeFiles/MagicMaskPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o -MF CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o.d -o CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o -c /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building OBJCXX object CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o"
+	/usr/bin/clang++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) -x objective-c++ $(OBJCXX_FLAGS) -MD -MT CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o -MF CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o.d -o CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o -c /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp
 
 CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp > CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing OBJCXX source to CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.i"
+	/usr/bin/clang++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -E /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp > CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.i
 
 CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp -o CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling OBJCXX source to assembly CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.s"
+	/usr/bin/clang++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -S /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp -o CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.s
 
 # Object files for target MagicMaskPlugin
 MagicMaskPlugin_OBJECTS = \
@@ -108,21 +108,24 @@ MagicMaskPlugin_OBJECTS = \
 # External object files for target MagicMaskPlugin
 MagicMaskPlugin_EXTERNAL_OBJECTS =
 
-MagicMaskPlugin.ofx: CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o
-MagicMaskPlugin.ofx: CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
-MagicMaskPlugin.ofx: CMakeFiles/MagicMaskPlugin.dir/build.make
-MagicMaskPlugin.ofx: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/lib/libOfxSupport.a
-MagicMaskPlugin.ofx: /opt/homebrew/lib/libonnxruntime.1.29.0.dylib
-MagicMaskPlugin.ofx: CMakeFiles/MagicMaskPlugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library MagicMaskPlugin.ofx"
+MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin: CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o
+MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin: CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
+MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin: CMakeFiles/MagicMaskPlugin.dir/build.make
+MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/lib/libOfxSupport.a
+MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin: /opt/homebrew/lib/libonnxruntime.1.29.0.dylib
+MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin: CMakeFiles/MagicMaskPlugin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking OBJCXX CFBundle shared module MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MagicMaskPlugin.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Compiling Metal shaders"
 	mkdir -p /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/Resources/shaders
 	xcrun metal -c /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/shaders/MetalTensorConverter.metal -o /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/MetalTensorConverter.air -std=metal3.0 -Wno-unused-function
 	xcrun metallib /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/MetalTensorConverter.air -o /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/Resources/shaders/MetalTensorConverter.metallib
+	/opt/homebrew/bin/cmake -E copy_directory /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/Resources/models /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/MagicMaskPlugin.ofx.bundle/Contents/Resources/models
+	/opt/homebrew/bin/cmake -E make_directory /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/MagicMaskPlugin.ofx.bundle/Contents/Resources/shaders
+	/opt/homebrew/bin/cmake -E copy /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/Resources/shaders/MetalTensorConverter.metallib /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/MagicMaskPlugin.ofx.bundle/Contents/Resources/shaders/
 
 # Rule to build all files generated by this target.
-CMakeFiles/MagicMaskPlugin.dir/build: MagicMaskPlugin.ofx
+CMakeFiles/MagicMaskPlugin.dir/build: MagicMaskPlugin.ofx.bundle/Contents/MacOS/MagicMaskPlugin
 .PHONY : CMakeFiles/MagicMaskPlugin.dir/build
 
 CMakeFiles/MagicMaskPlugin.dir/clean:

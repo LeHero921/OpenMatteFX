@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(MagicMaskPlugin LANGUAGES CXX)
+project(MagicMaskPlugin LANGUAGES CXX OBJCXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -27,6 +27,8 @@ find_package(onnxruntime CONFIG REQUIRED)
 # Apple Frameworks
 find_library(METAL_FRAMEWORK Metal)
 find_library(FOUNDATION_FRAMEWORK Foundation) # Wichtig für Metal!
+
+set_source_files_properties(src/PluginRegistration.cpp src/InferenceEngine.cpp PROPERTIES LANGUAGE OBJCXX)
 
 # 1. ÄNDERUNG: MODULE statt SHARED nutzen!
 add_library(${PROJECT_NAME} MODULE

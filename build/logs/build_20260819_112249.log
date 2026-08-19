@@ -1,0 +1,210 @@
+==================================
+Building MagicMask Plugin
+==================================
+Project Directory: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX
+Build Directory: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build
+Log File: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/logs/build_20260819_112249.log
+==================================
+Cleaning previous build artifacts...
+Checking OpenFX SDK...
+Checking ONNX Runtime...
+ONNX Runtime not found. Installing via Homebrew...
+Warning: onnxruntime 1.29.0 is already installed and up-to-date.
+To reinstall 1.29.0, run:
+  brew reinstall onnxruntime
+==================================
+Compiling Metal Shaders
+==================================
+Metal shaders compiled successfully!
+==================================
+Building OFX Plugin via CMake
+==================================
+-- The OBJCXX compiler identification is AppleClang 21.0.0.21000101
+-- Detecting OBJCXX compiler ABI info
+-- Detecting OBJCXX compiler ABI info - done
+-- Check for working OBJCXX compiler: /usr/bin/clang++ - skipped
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build
+[ 33%] Building CXX object CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o
+[ 66%] Building OBJCXX object CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:6:
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.h:9:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:9:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:617:1: error: expected unqualified-id
+  617 | @class NSString, Protocol;
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:619:9: error: unknown type name 'NSString'
+  619 | typedef NSString * NSExceptionName NS_TYPED_EXTENSIBLE_ENUM;
+      |         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:620:9: error: unknown type name 'NSString'
+  620 | typedef NSString * NSRunLoopMode NS_TYPED_EXTENSIBLE_ENUM;
+      |         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:622:19: error: unknown type name 'NSString'
+  622 | FOUNDATION_EXPORT NSString *NSStringFromSelector(SEL aSelector);
+      |                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:623:44: error: unknown type name 'NSString'
+  623 | FOUNDATION_EXPORT SEL NSSelectorFromString(NSString *aSelectorName);
+      |                                            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:625:19: error: unknown type name 'NSString'
+  625 | FOUNDATION_EXPORT NSString *NSStringFromClass(Class aClass);
+      |                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:626:53: error: unknown type name 'NSString'
+  626 | FOUNDATION_EXPORT Class _Nullable NSClassFromString(NSString *aClassName);
+      |                                                     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:628:19: error: unknown type name 'NSString'
+  628 | FOUNDATION_EXPORT NSString *NSStringFromProtocol(Protocol *proto) API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
+      |                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:629:61: error: unknown type name 'NSString'
+  629 | FOUNDATION_EXPORT Protocol * _Nullable NSProtocolFromString(NSString *namestr) API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
+      |                                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:633:30: error: unknown type name 'NSString'
+  633 | FOUNDATION_EXPORT void NSLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2) NS_NO_TAIL_CALL;
+      |                              ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:633:53: error: format argument not a string type
+  633 | FOUNDATION_EXPORT void NSLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2) NS_NO_TAIL_CALL;
+      |                              ~~~~~~~~~~~~~~~~       ^                  ~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:94:49: note: expanded from macro 'NS_FORMAT_FUNCTION'
+   94 |         #define NS_FORMAT_FUNCTION(F,A) __attribute__((format(__NSString__, F, A)))
+      |                                                        ^                    ~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:634:31: error: unknown type name 'NSString'
+  634 | FOUNDATION_EXPORT void NSLogv(NSString *format, va_list args) NS_FORMAT_FUNCTION(1,0) NS_NO_TAIL_CALL;
+      |                               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:634:63: error: format argument not a string type
+  634 | FOUNDATION_EXPORT void NSLogv(NSString *format, va_list args) NS_FORMAT_FUNCTION(1,0) NS_NO_TAIL_CALL;
+      |                               ~~~~~~~~~~~~~~~~                ^                  ~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:94:49: note: expanded from macro 'NS_FORMAT_FUNCTION'
+   94 |         #define NS_FORMAT_FUNCTION(F,A) __attribute__((format(__NSString__, F, A)))
+      |                                                        ^                    ~
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:6:
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.h:9:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:11:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:7:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSZone.h:9:1: error: expected unqualified-id
+    9 | @class NSString;
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSZone.h:19:63: error: unknown type name 'NSString'
+   19 | FOUNDATION_EXPORT void NSSetZoneName(NSZone * _Nullable zone, NSString *name)NS_SWIFT_UNAVAILABLE("Zone-based memory management is unavailable");
+      |                                                               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSZone.h:20:19: error: unknown type name 'NSString'
+   20 | FOUNDATION_EXPORT NSString *NSZoneName(NSZone * _Nullable zone) NS_SWIFT_UNAVAILABLE("Zone-based memory management is unavailable");
+      |                   ^
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:6:
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.h:9:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h:11:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h:5:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:9:1: error: expected unqualified-id
+    9 | @class NSInvocation, NSMethodSignature, NSCoder, NSString, NSEnumerator;
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:10:1: error: expected unqualified-id
+   10 | @class Protocol;
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:16:1: error: expected unqualified-id
+   16 | @protocol NSCopying
+      | ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:1:
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:25:9: error: use of undeclared identifier 'OFX'
+   25 |         OFX::Clip* inputClip,
+      |         ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:37:39: error: use of undeclared identifier 'OrtReleaseEnv'
+   37 |     std::unique_ptr<OrtEnv, decltype(&OrtReleaseEnv)> m_env;
+      |                                       ^~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:38:43: error: use of undeclared identifier 'OrtReleaseSession'
+   38 |     std::unique_ptr<OrtSession, decltype(&OrtReleaseSession)> m_sam2Session;
+      |                                           ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:39:43: error: use of undeclared identifier 'OrtReleaseSession'
+   39 |     std::unique_ptr<OrtSession, decltype(&OrtReleaseSession)> m_refinementSession;
+      |                                           ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:70:49: error: use of undeclared identifier 'OFX'
+   70 |     std::vector<float> convertOFXBufferToTensor(OFX::Clip* clip, int width, int height);
+      |                                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:71:54: error: use of undeclared identifier 'OFX'
+   71 |     std::vector<float> convertOFXBufferToTensorMetal(OFX::Clip* clip, int width, int height);
+      |                                                      ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:22: error: unknown type name 'OrtStatus'; did you mean 'OSStatus'?
+   74 |     void checkStatus(OrtStatus* status);
+      |                      ^~~~~~~~~
+      |                      OSStatus
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/MacTypes.h:281:41: note: 'OSStatus' declared here
+  281 | typedef SInt32                          OSStatus;
+      |                                         ^
+20 errors generated.
+make[2]: *** [CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:9:23: error: use of undeclared identifier 'OrtReleaseEnv'
+    9 |     : m_env(nullptr, &OrtReleaseEnv),
+      |                       ^~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:10:31: error: use of undeclared identifier 'OrtReleaseSession'
+   10 |       m_sam2Session(nullptr, &OrtReleaseSession),
+      |                               ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:11:37: error: use of undeclared identifier 'OrtReleaseSession'
+   11 |       m_refinementSession(nullptr, &OrtReleaseSession),
+      |                                     ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:46:17: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   46 |     checkStatus(status);
+      |                 ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:33: note: passing argument to parameter 'status' here
+   74 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:50:14: error: use of undeclared identifier 'OrtCreateSessionOptions'; did you mean 'OrtSessionOptions'?
+   50 |     status = OrtCreateSessionOptions(&session_options);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/include/onnxruntime/onnxruntime_c_api.h:302:1: note: 'OrtSessionOptions' declared here
+  302 | ORT_RUNTIME_CLASS(SessionOptions);
+      | ^
+/opt/homebrew/include/onnxruntime/onnxruntime_c_api.h:283:25: note: expanded from macro 'ORT_RUNTIME_CLASS'
+  283 |   typedef struct Ort##X Ort##X
+      |                         ^
+<scratch space>:7:1: note: expanded from here
+    7 | OrtSessionOptions
+      | ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:51:17: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   51 |     checkStatus(status);
+      |                 ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:33: note: passing argument to parameter 'status' here
+   74 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:55:14: error: use of undeclared identifier 'OrtSessionOptionsAppendExecutionProvider'
+   55 |     status = OrtSessionOptionsAppendExecutionProvider(session_options, providers[0], 0);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:60:18: error: use of undeclared identifier 'OrtSessionOptionsAppendExecutionProvider'
+   60 |         status = OrtSessionOptionsAppendExecutionProvider(session_options, fallbackProviders[0], 0);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:61:21: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   61 |         checkStatus(status);
+      |                     ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:33: note: passing argument to parameter 'status' here
+   74 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:93:17: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   93 |     checkStatus(status);
+      |                 ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:33: note: passing argument to parameter 'status' here
+   74 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:97:5: error: use of undeclared identifier 'OFX'
+   97 |     OFX::Clip* inputClip,
+      |     ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:128:62: error: use of undeclared identifier 'OFX'
+  128 | std::vector<float> InferenceEngine::convertOFXBufferToTensor(OFX::Clip* clip, int width, int height) {
+      |                                                              ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:139:54: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+  139 |             tensor[i] = static_cast<float>(rand()) / RAND_MAX;
+      |                                                    ~ ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:124:18: note: expanded from macro 'RAND_MAX'
+  124 | #define RAND_MAX        0x7fffffff
+      |                         ^~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 20 errors generated.
+make[2]: *** [CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o] Error 1
+make[1]: *** [CMakeFiles/MagicMaskPlugin.dir/all] Error 2
+make: *** [all] Error 2
+Build failed!

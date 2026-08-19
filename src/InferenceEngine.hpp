@@ -31,6 +31,7 @@ public:
     );
 
     bool isInitialized() const { return m_initialized; }
+    bool isMetalAvailable() const { return m_metalInitialized; }
 
 private:
     // Internal session management
@@ -42,12 +43,14 @@ private:
     id<MTLDevice> m_metalDevice;
     id<MTLCommandQueue> m_commandQueue;
     id<MTLLibrary> m_metalLibrary;
-
+    NSCache* m_bufferPool;
+    
     // Model paths
     std::string m_sam2ModelPath;
     std::string m_refinementModelPath;
     
     bool m_initialized;
+    bool m_metalInitialized;
 
     // Helper functions
     void loadModel(const std::string& modelPath, OrtSession** session);
@@ -66,13 +69,12 @@ private:
         int height
     );
 
-    // Metal tensor conversion functions
-    std::vector<float> convertOFXBufferToTensor(OFX::Clip* clip, int width, int height);
+    // Metal specific functions
+    void initializeMetal();
     std::vector<float> convertOFXBufferToTensorMetal(OFX::Clip* clip, int width, int height);
     
     // Utility functions
     void checkStatus(OrtStatus* status);
-    void initializeMetal();
 };
 
 #endif // INFERENCE_ENGINE_HPP

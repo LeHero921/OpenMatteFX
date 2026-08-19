@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/CMakeLists.txt"
+  "/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/Info.plist"
   "CMakeFiles/4.4.2/CMakeCXXCompiler.cmake"
+  "CMakeFiles/4.4.2/CMakeOBJCXXCompiler.cmake"
   "CMakeFiles/4.4.2/CMakeSystem.cmake"
   "/opt/homebrew/lib/cmake/onnxruntime/onnxruntimeConfig.cmake"
   "/opt/homebrew/lib/cmake/onnxruntime/onnxruntimeConfigVersion.cmake"
@@ -19,10 +21,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake"
+  "/opt/homebrew/share/cmake/Modules/CMakeOBJCXXInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
+  "/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-OBJCXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "/opt/homebrew/share/cmake/Modules/Compiler/Clang-OBJCXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake"
   "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
@@ -30,13 +35,18 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+  "/opt/homebrew/share/cmake/Modules/Internal/CMakeOBJCXXLinkerInformation.cmake"
+  "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake"
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
+  "/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-OBJCXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake"
+  "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-OBJCXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake"
+  "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake"
@@ -50,6 +60,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "MagicMaskPlugin.ofx.bundle/Contents/MacOS"
+  "MagicMaskPlugin.ofx.bundle/Contents/Info.plist"
+  "MagicMaskPlugin.ofx.bundle/Contents/Info.plist"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
