@@ -1,10 +1,11 @@
 #include "InferenceEngine.hpp"
-#include <onnxruntime_cxx_api.h>
-#include "Support/ofxsImageEffect.h"
+#include <Metal/Metal.h>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include <Metal/Metal.h>
+#include <onnxruntime_cxx_api.h>
+#include "Support/ofxsImageEffect.h"
+#include <CoreFoundation/CoreFoundation.h>
 
 InferenceEngine::InferenceEngine() 
     : m_env(nullptr, &OrtReleaseEnv),

@@ -1,0 +1,176 @@
+==================================
+Building MagicMask Plugin
+==================================
+Project Directory: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX
+Build Directory: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build
+Log File: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build/logs/build_20260819_121624.log
+==================================
+Cleaning previous build artifacts...
+Checking OpenFX SDK...
+Checking ONNX Runtime...
+ONNX Runtime not found. Installing via Homebrew...
+Warning: onnxruntime 1.29.0_1 is already installed and up-to-date.
+To reinstall 1.29.0_1, run:
+  brew reinstall onnxruntime
+==================================
+Compiling Metal Shaders
+==================================
+Metal shaders compiled successfully!
+==================================
+Building OFX Plugin via CMake
+==================================
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/build
+[ 66%] Building OBJCXX object CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o
+[ 66%] Building OBJCXX object CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
+In file included from /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:1:
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:25:9: error: use of undeclared identifier 'OFX'
+In file included from    25 |      /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:1:
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:25:9: error: use of undeclared identifier 'OFX'
+   OFX::C   l25i | p *   i n p u t COlFiXp:,:
+C      l| i        ^p
+* inputClip,
+      |         ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:38:39: error: use of undeclared identifier 'OrtReleaseEnv'
+   38 |     std::unique_ptr<OrtEnv, decltype(&OrtReleaseEnv)> m_env;
+      |                                       ^~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:38:39: error: use of undeclared identifier 'OrtReleaseEnv'
+   38 |     std::unique_ptr<OrtEnv, decltype(&OrtReleaseEnv)> m_env;
+      |                                       ^~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:39:43: error: use of undeclared identifier 'OrtReleaseSession'
+   39 |     std::unique_ptr<OrtSession, decltype(&OrtReleaseSession)> m_sam2Session;
+      |                                           ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:39:43: error: use of undeclared identifier 'OrtReleaseSession'
+   39 |     std::unique_ptr<OrtSession, decltype(&OrtReleaseSession)> m_sam2Session;
+      |                                           ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:40:43: error: use of undeclared identifier 'OrtReleaseSession'
+   40 |     std::unique_ptr<OrtSession, decltype(&OrtReleaseSession)> m_refinementSession;
+      |                                           ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:40:43: error: use of undeclared identifier 'OrtReleaseSession'
+   40 |     std::unique_ptr<OrtSession, decltype(&OrtReleaseSession)> m_refinementSession;
+      |                                           ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:54: error: use of undeclared identifier 'OFX'
+   74 |     std::vector<float> convertOFXBufferToTensorMetal(OFX::Clip* clip, int width, int height);
+      |                                                      ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:54: error: use of undeclared identifier 'OFX'
+   74 |     std::vector<float> convertOFXBufferToTensorMetal(OFX::Clip* clip, int width, int height);
+      |                                                      ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:77:22: error: unknown type name 'OrtStatus'; did you mean 'OSStatus'?
+   77 |     void checkStatus(OrtStatus* status);
+      |                      ^~~~~~~~~
+      |                      OSStatus
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/MacTypes.h:281:41: note: 'OSStatus' declared here
+  281 | typedef SInt32                          OSStatus;
+      |                                         ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:77:22: error: unknown type name 'OrtStatus'; did you mean 'OSStatus'?
+   77 |     void checkStatus(OrtStatus* status);
+      |                      ^~~~~~~~~
+      |                      OSStatus
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/MacTypes.h:281:41: note: 'OSStatus' declared here
+  281 | typedef SInt32                          OSStatus;
+      |                                         ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:257:19: error: non-friend class member 'getPluginIDs' cannot have a qualified name
+  257 | void OFX::Plugin::getPluginIDs(OFX::PluginFactoryArray &ids) {
+      |      ~~~~~~~~~~~~~^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:260:2: error: expected '}'
+  260 | }
+      |  ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:37:49: note: to match this '{'
+   37 | class MagicMaskPlugin : public OFX::ImageEffect {
+      |                                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/PluginRegistration.cpp:260:2: error: expected ';' after class
+  260 | }
+      |  ^
+      |  ;
+9 errors generated.
+make[2]: *** [CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:10:23: error: use of undeclared identifier 'OrtReleaseEnv'
+   10 |     : m_env(nullptr, &OrtReleaseEnv),
+      |                       ^~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:11:31: error: use of undeclared identifier 'OrtReleaseSession'
+   11 |       m_sam2Session(nullptr, &OrtReleaseSession),
+      |                               ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:12:37: error: use of undeclared identifier 'OrtReleaseSession'
+   12 |       m_refinementSession(nullptr, &OrtReleaseSession),
+      |                                     ^~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:47:17: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   47 |     checkStatus(status);
+      |                 ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:77:33: note: passing argument to parameter 'status' here
+   77 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:51:14: error: use of undeclared identifier 'OrtCreateSessionOptions'; did you mean 'OrtSessionOptions'?
+   51 |     status = OrtCreateSessionOptions(&session_options);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/include/onnxruntime/onnxruntime_c_api.h:302:1: note: 'OrtSessionOptions' declared here
+  302 | ORT_RUNTIME_CLASS(SessionOptions);
+      | ^
+/opt/homebrew/include/onnxruntime/onnxruntime_c_api.h:283:25: note: expanded from macro 'ORT_RUNTIME_CLASS'
+  283 |   typedef struct Ort##X Ort##X
+      |                         ^
+<scratch space>:7:1: note: expanded from here
+    7 | OrtSessionOptions
+      | ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:52:17: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   52 |     checkStatus(status);
+      |                 ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:77:33: note: passing argument to parameter 'status' here
+   77 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:56:14: error: use of undeclared identifier 'OrtSessionOptionsAppendExecutionProvider'
+   56 |     status = OrtSessionOptionsAppendExecutionProvider(session_options, providers[0], 0);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:61:18: error: use of undeclared identifier 'OrtSessionOptionsAppendExecutionProvider'
+   61 |         status = OrtSessionOptionsAppendExecutionProvider(session_options, fallbackProviders[0], 0);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:62:21: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+   62 |         checkStatus(status);
+      |                     ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:77:33: note: passing argument to parameter 'status' here
+   77 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:111:23: warning: instance method '-setCacheCostLimit:' not found (return type defaults to 'id') [-Wobjc-method-access]
+  111 |         [m_bufferPool setCacheCostLimit:1024 * 1024 * 100]; // 100MB limit
+      |                       ^~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSCache.h:13:12: note: receiver is instance of class declared here
+   13 | @interface NSCache <KeyType, ObjectType> : NSObject
+      |            ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:124:17: error: cannot initialize a parameter of type 'OSStatus *' (aka 'int *') with an lvalue of type 'OrtStatus *'
+  124 |     checkStatus(status);
+      |                 ^~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:77:33: note: passing argument to parameter 'status' here
+   77 |     void checkStatus(OrtStatus* status);
+      |                                 ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:127:37: error: out-of-line definition of 'runInference' does not match any declaration in 'InferenceEngine'
+  127 | std::vector<float> InferenceEngine::runInference(
+      |                                     ^~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:15:7: note: InferenceEngine defined here
+   15 | class InferenceEngine {
+      |       ^~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:136:38: error: use of undeclared identifier 'convertOFXBufferToTensor'; did you mean 'convertOFXBufferToTensorMetal'?
+  136 |     std::vector<float> imageTensor = convertOFXBufferToTensor(inputClip, width, height);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      convertOFXBufferToTensorMetal
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:74:24: note: 'convertOFXBufferToTensorMetal' declared here
+   74 |     std::vector<float> convertOFXBufferToTensorMetal(OFX::Clip* clip, int width, int height);
+      |                        ^
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:159:37: error: out-of-line definition of 'convertOFXBufferToTensor' does not match any declaration in 'InferenceEngine'
+  159 | std::vector<float> InferenceEngine::convertOFXBufferToTensor(OFX::Clip* clip, int width, int height) {
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp:15:7: note: InferenceEngine defined here
+   15 | class InferenceEngine {
+      |       ^~~~~~~~~~~~~~~
+/Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.cpp:170:54: warning: implicit conversion from 'int' to 'float' changes value from 2147483647 to 2147483648 [-Wimplicit-const-int-float-conversion]
+  170 |             tensor[i] = static_cast<float>(rand()) / RAND_MAX;
+      |                                                    ~ ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:124:18: note: expanded from macro 'RAND_MAX'
+  124 | #define RAND_MAX        0x7fffffff
+      |                         ^~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.
+make[2]: *** [CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o] Error 1
+make[1]: *** [CMakeFiles/MagicMaskPlugin.dir/all] Error 2
+make: *** [all] Error 2
+Build failed!

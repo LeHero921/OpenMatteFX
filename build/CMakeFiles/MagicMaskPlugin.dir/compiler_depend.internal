@@ -961,11 +961,13 @@ CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/functional.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/ios.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/istream.h
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/map.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/memory.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/memory_resource.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/ostream.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/pair.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/set.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/sstream.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/streambuf.h
@@ -1144,6 +1146,7 @@ CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support/pthread.h
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/find_index.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/ignore.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h
@@ -1347,7 +1350,9 @@ CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/limits
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/list
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/locale
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/math.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/memory
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/mutex
@@ -1357,6 +1362,7 @@ CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/queue
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h
@@ -1696,6 +1702,24 @@ CMakeFiles/MagicMaskPlugin.dir/src/InferenceEngine.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/stdbool.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/stdint.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsCore.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsImageEffect.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsInteract.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsMessage.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsParam.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxCore.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxImageEffect.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxInteract.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxKeySyms.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxMemory.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxMessage.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxMultiThread.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxParam.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxParametricParam.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxPixels.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxProgress.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxProperty.h
+ /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxTimeLine.h
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/src/InferenceEngine.hpp
  /opt/homebrew/include/onnxruntime/onnxruntime_c_api.h
  /opt/homebrew/include/onnxruntime/onnxruntime_cxx_api.h
@@ -3030,6 +3054,7 @@ CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ios
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/limits
@@ -3394,7 +3419,6 @@ CMakeFiles/MagicMaskPlugin.dir/src/PluginRegistration.cpp.o
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsMultiThread.h
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsParam.h
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsProcessing.h
- /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/Support/ofxsimageEffect.h
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxCore.h
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxImageEffect.h
  /Users/heikoschallenberg/Documents/GitHub/OpenMatteFX/include/openfx/ofxInteract.h

@@ -1,6 +1,14 @@
 #ifndef INFERENCE_ENGINE_HPP
 #define INFERENCE_ENGINE_HPP
 
+#pragma once
+
+// ONNX Runtime C-API (wichtig, damit OrtStatus bekannt ist)
+#include <onnxruntime_c_api.h>
+
+// OpenFX Support
+#include "ofxsImageEffect.h"
+
 #include <memory>
 #include <vector>
 #include <string>

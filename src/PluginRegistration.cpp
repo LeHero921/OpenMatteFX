@@ -20,7 +20,7 @@
 #define PLUGIN_VERSION_MICRO 0
 
 // Plugin ID
-#define PLUGIN_ID "com.QuantuumStudios.openmattefx"
+#define PLUGIN_ID "com.quantuumstudios.openmattefx"
 
 // Parameter names
 #define PARAM_SELECTION_POINT "selectionPoint"
@@ -173,61 +173,61 @@ private:
         return fullPath;
     }
     
-    // Helper to apply mask
-    // Apply generated mask to output clip
-void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector<float>& mask, int width, int height, double time) {
-    if (mask.empty() || width <= 0 || height <= 0 || !outputClip) return;
+//     // Helper to apply mask
+//     // Apply generated mask to output clip
+// void MagicMaskPlugin::applyMaskToOutput(OFX::Clip* outputClip, const std::vector<float>& mask, int width, int height, double time) {
+//     if (mask.empty() || width <= 0 || height <= 0 || !outputClip) return;
     
-    try {
-        // Get the bounds of the frame
-        OfxRectI bounds;
-        bounds.x1 = 0;
-        bounds.y1 = 0;
-        bounds.x2 = width;
-        bounds.y2 = height;
+//     try {
+//         // Get the bounds of the frame
+//         OfxRectI bounds;
+//         bounds.x1 = 0;
+//         bounds.y1 = 0;
+//         bounds.x2 = width;
+//         bounds.y2 = height;
         
-        // Fetch the output image for writing
-        OFX::Image* outputImg = outputClip->fetchImage(time);
-        if (!outputImg) return;
+//         // Fetch the output image for writing
+//         OFX::Image* outputImg = outputClip->fetchImage(time);
+//         if (!outputImg) return;
         
-        // Get image properties
-        OfxRectI imgBounds = outputImg->getBounds();
-        int imgWidth = imgBounds.x2 - imgBounds.x1;
-        int imgHeight = imgBounds.y2 - imgBounds.y1;
+//         // Get image properties
+//         OfxRectI imgBounds = outputImg->getBounds();
+//         int imgWidth = imgBounds.x2 - imgBounds.x1;
+//         int imgHeight = imgBounds.y2 - imgBounds.y1;
         
-        // Get pixel data pointer
-        void* pixelData = outputImg->getPixelData();
-        int bytesPerPixel = outputImg->getRowBytes();
-        int rowBytes = outputImg->getRowBytes();
+//         // Get pixel data pointer
+//         void* pixelData = outputImg->getPixelData();
+//         int bytesPerPixel = outputImg->getRowBytes();
+//         int rowBytes = outputImg->getRowBytes();
         
-        // Apply mask to alpha channel (assuming RGBA format)
-        if (bytesPerPixel >= 4) {  // RGBA format
-            float* pixelPtr = static_cast<float*>(pixelData);
+//         // Apply mask to alpha channel (assuming RGBA format)
+//         if (bytesPerPixel >= 4) {  // RGBA format
+//             float* pixelPtr = static_cast<float*>(pixelData);
             
-            for (int y = 0; y < height && y < imgHeight; ++y) {
-                for (int x = 0; x < width && x < imgWidth; ++x) {
-                    int pixelIndex = y * (rowBytes / sizeof(float)) + x * 4;
+//             for (int y = 0; y < height && y < imgHeight; ++y) {
+//                 for (int x = 0; x < width && x < imgWidth; ++x) {
+//                     int pixelIndex = y * (rowBytes / sizeof(float)) + x * 4;
                     
-                    // Get mask value at this position
-                    int maskIndex = y * width + x;
-                    if (maskIndex < static_cast<int>(mask.size())) {
-                        // Apply the mask as alpha channel
-                        pixelPtr[pixelIndex + 3] = mask[maskIndex];  // Alpha channel
-                    }
-                }
-            }
-        }
+//                     // Get mask value at this position
+//                     int maskIndex = y * width + x;
+//                     if (maskIndex < static_cast<int>(mask.size())) {
+//                         // Apply the mask as alpha channel
+//                         pixelPtr[pixelIndex + 3] = mask[maskIndex];  // Alpha channel
+//                     }
+//                 }
+//             }
+//         }
         
-        // Release the image back to the host
-        // outputClip->releaseImage(outputImg);
-        delete outputImg;
+//         // Release the image back to the host
+//         // outputClip->releaseImage(outputImg);
+//         delete outputImg;
         
-    } catch (const std::exception& e) {
-        std::cerr << "Error applying mask to output: " << e.what() << std::endl;
-    }
-}
+//     } catch (const std::exception& e) {
+//         std::cerr << "Error applying mask to output: " << e.what() << std::endl;
+//     }
+// }
 
-};
+// };
 
 // Plugin factory function
 OFX::ImageEffect* createPlugin(OfxImageEffectHandle handle) {
@@ -258,3 +258,4 @@ void OFX::Plugin::getPluginIDs(OFX::PluginFactoryArray &ids) {
     static MagicMaskPluginFactory p;
     ids.push_back(&p);
 }
+};

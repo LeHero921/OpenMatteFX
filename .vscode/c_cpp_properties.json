@@ -5,7 +5,8 @@
             "includePath": [
                 "${default}",
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include/openfx"
+                "${workspaceFolder}/include/openfx",
+                "/opt/homebrew/include/**"
             ],
             "defines": [],
             "cStandard": "c17",
